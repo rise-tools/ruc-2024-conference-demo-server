@@ -1,0 +1,25 @@
+{
+  "name": "react-universe-conf-server-demo",
+  "private": true,
+  "dependencies": {
+    "@rise-tools/cli": "0.13.0",
+    "@rise-tools/kit-expo-router": "0.13.0",
+    "@rise-tools/kit-react-native": "0.13.0",
+    "@rise-tools/server": "0.13.0"
+  },
+  "devDependencies": {
+    "@rise-tools/preset-typescript": "0.13.0",
+    "@types/react": "^18.0.27",
+    "cross-env": "^7.0.3",
+    "tsx": "^4.11.0",
+    "typescript": "^5.1.3"
+  },
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "tunnel": "tsx src/tunnel.ts",
+    "dev": "cross-env NODE_ENV=development tsx watch src/server.ts"
+  },
+  "overrides": {
+    "react-dom": "18.2.0"
+  }
+}
