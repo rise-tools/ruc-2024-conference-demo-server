@@ -1,7 +1,7 @@
+import { Video } from '@prisma/client'
 import { navigate, StackScreen } from '@rise-tools/kit-expo-router/server'
 import { openURL } from '@rise-tools/kit-linking/server'
 import {
-  ActivityIndicator,
   FlatList,
   Image,
   ScrollView,
@@ -22,7 +22,7 @@ import {
   ThemedText,
   VenueInfo,
 } from '../../ruc2024-mobile-app/rise/components/server'
-import { Content, videos } from './db'
+import { edition, videos } from './db'
 
 /** Poor man's tamagui */
 const $lg = 20
@@ -51,7 +51,7 @@ function ArchiveInfo() {
   )
 }
 
-function VideoSection({ title, content }: { title: string; content: Content }) {
+function VideoSection({ title, content }: { title: string; content: Video[] }) {
   const data = content.map((item) => ({
     key: item.id,
     view: (
@@ -63,6 +63,11 @@ function VideoSection({ title, content }: { title: string; content: Content }) {
       </TouchableOpacity>
     ),
   }))
+
+  if (data.length === 0) {
+    return null
+  }
+
   return (
     <>
       <ThemedText style={{ fontSize: $xl, padding: $lg }}>{title}</ThemedText>
@@ -76,25 +81,20 @@ const Archive = view((get) => {
 
   const content = get(videos)
   if (!content) {
-    return (
-      <>
-        {screen}
-        <ActivityIndicator />
-      </>
-    )
+    return <>{screen}</>
   }
 
   return (
     <>
       {screen}
       <ScrollView contentContainerStyle={{ gap: 0, paddingBottom: $xl }}>
-        <VideoSection title="2023" content={content} />
-        <VideoSection title="2022" content={content} />
-        <VideoSection title="2021" content={content} />
-        <VideoSection title="2020" content={content} />
-        <VideoSection title="2019" content={content} />
-        <VideoSection title="2018" content={content} />
-        <VideoSection title="2017" content={content} />
+        <VideoSection title="2023" content={edition(content, '2023')} />
+        <VideoSection title="2022" content={edition(content, '2022')} />
+        <VideoSection title="2021" content={edition(content, '2021')} />
+        <VideoSection title="2020" content={edition(content, '2020')} />
+        <VideoSection title="2019" content={edition(content, '2019')} />
+        <VideoSection title="2018" content={edition(content, '2018')} />
+        <VideoSection title="2017" content={edition(content, '2017')} />
       </ScrollView>
     </>
   )

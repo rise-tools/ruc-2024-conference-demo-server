@@ -2,116 +2,139 @@
   {
     "title": "React Native EU 2023 Trailer",
     "thumbnail": "https://i.ytimg.com/vi_webp/-fL7wZDKSEE/maxresdefault.webp",
-    "id": "-fL7wZDKSEE"
+    "id": "-fL7wZDKSEE",
+    "edition": "2023"
   },
   {
     "title": "Guenther Steiner invites you to React Native EU 🏁",
     "thumbnail": "https://i.ytimg.com/vi_webp/9o3uCx_Zo24/maxresdefault.webp",
-    "id": "9o3uCx_Zo24"
+    "id": "9o3uCx_Zo24",
+    "edition": "2023"
   },
   {
     "title": "React Native EU 2023 Keynote - Łukasz Chludziński, Alex Hunt, Riccardo Cipolleschi",
     "thumbnail": "https://i.ytimg.com/vi/-rCRgbsJumk/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gFig7MA8=&rs=AOn4CLCWkViqqKv4dtkTuAPCnGTDm0qOWA",
-    "id": "-rCRgbsJumk"
+    "id": "-rCRgbsJumk",
+    "edition": "2023"
   },
   {
     "title": "Scaling of the PlayStation App with React Native - Fernando Ruiz | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/ND8hREs04FY/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gEygxMA8=&rs=AOn4CLAE9UGxIZna66K1KDfQxdbFHHHMUg",
-    "id": "ND8hREs04FY"
+    "id": "ND8hREs04FY",
+    "edition": "2023"
   },
   {
     "title": "The Invisible Architect - Michał Pierzchała | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/WhhQwUPSaaY/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gEygzMA8=&rs=AOn4CLBM7dohN6rLGkYFozvoEIJ_uQtM8w",
-    "id": "WhhQwUPSaaY"
+    "id": "WhhQwUPSaaY",
+    "edition": "2023"
   },
   {
     "title": "The day I broke React Native - Nicola Corti | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/Rers6rpuGTo/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gEygyMA8=&rs=AOn4CLDG-2BWaIIJbwfYebRSQA3mcHurIw",
-    "id": "Rers6rpuGTo"
+    "id": "Rers6rpuGTo",
+    "edition": "2023"
   },
   {
     "title": "Our Journey of Making React Native a Preferred Choice - Lorenzo Sciandra & Tommy Nguyen | RNEU 2023",
     "thumbnail": "https://i.ytimg.com/vi/PYMMxfttOug/maxresdefault.jpg",
-    "id": "PYMMxfttOug"
+    "id": "PYMMxfttOug",
+    "edition": "2023"
   },
   {
     "title": "How Expensify is Building Bridges with OSS and React Native - Rory Abraham | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi_webp/jqKE7suC-s8/sddefault.webp",
-    "id": "jqKE7suC-s8"
+    "id": "jqKE7suC-s8",
+    "edition": "2023"
   },
   {
     "title": "Adding modularity to your React Native library - Mathieu Acthernoene | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi_webp/eaSUaB4if2g/sddefault.webp",
-    "id": "eaSUaB4if2g"
+    "id": "eaSUaB4if2g",
+    "edition": "2023"
   },
   {
     "title": "Build Your Mental Model of React’s Rendering Behavior - Charlotte Isambert | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/-x2HdZ5unH4/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgNyhLMA8=&rs=AOn4CLBtj_4dQ7J2onlDzvEo5qVlpwS9hw-x2HdZ5unH4",
-    "id": ""
+    "id": "",
+    "edition": "2023"
   },
   {
     "title": "Creating Design Systems in React Native - Marek Fořt | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/jKhLWl1MX5s/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gNChPMA8=&rs=AOn4CLC_RASPRQswq1hkeF2HryZNNV0NRg",
-    "id": "jKhLWl1MX5s"
+    "id": "jKhLWl1MX5s",
+    "edition": "2023"
   },
   {
     "title": "A peek into React Navigation 7 - Satyajit Sahoo | React Native 2023",
     "thumbnail": "https://i.ytimg.com/vi/3zvbeN_91nk/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gEygxMA8=&rs=AOn4CLDzYsKB7ATaJTd7LgrEdKR1xQKoPg",
-    "id": "3zvbeN_91nk"
+    "id": "3zvbeN_91nk",
+    "edition": "2023"
   },
   {
     "title": "Lifting & Shifting Entire React Ecosystem into New Languages - Matt Hargett | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/wRx9oSVaSXs/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gFCgzMA8=&rs=AOn4CLB3AXWjaqEefGBRShQEVz6aocLcwQ",
-    "id": "wRx9oSVaSXs"
+    "id": "wRx9oSVaSXs",
+    "edition": "2023"
   },
   {
     "title": "Feature Driven Design: Microfrontends’ Best Friend (Chase App) - Sandra Jurek | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/iw12uJf1BwM/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gFCg0MA8=&rs=AOn4CLCAc-G_e0WhTnACVajQyJmfdQJttQ",
-    "id": "iw12uJf1BwM"
+    "id": "iw12uJf1BwM",
+    "edition": "2023"
   },
   {
     "title": "A Story(book) About Testing - Anisha Malde | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi_webp/eaZ9MdRIbRQ/sddefault.webp",
-    "id": "eaZ9MdRIbRQ"
+    "id": "eaZ9MdRIbRQ",
+    "edition": "2023"
   },
   {
     "title": "How Ant Colonies are Revolutionizing Digital Health Development - Jacob Suñol | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi_webp/UnSYNKZnAXA/sddefault.webp",
-    "id": "UnSYNKZnAXA"
+    "id": "UnSYNKZnAXA",
+    "edition": "2023"
   },
   {
     "title": "Hermes Hacking: Demystifying JavaScript Engines - Radek Pietruszewski | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/LIhDyF1Gatc/maxresdefault.jpg",
-    "id": "LIhDyF1Gatc"
+    "id": "LIhDyF1Gatc",
+    "edition": "2023"
   },
   {
     "title": "Static Hermes: the Next Generation of Hermes - Tzvetan Mikov | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi_webp/q-xKYA0EO-c/sddefault.webp",
-    "id": "q-xKYA0EO-c"
+    "id": "q-xKYA0EO-c",
+    "edition": "2023"
   },
   {
     "title": "Connecting React Native App with Garmin Smartwatch - Małgorzata Mazurek-Biel | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/CRQOkie6Ej8/maxresdefault.jpg",
-    "id": "CRQOkie6Ej8"
+    "id": "CRQOkie6Ej8",
+    "edition": "2023"
   },
   {
     "title": "From Gaming to Productivity: how Microsoft is using React Native across a portfolio of experiences",
     "thumbnail": "https://i.ytimg.com/vi/EgpHCLCwebU/maxresdefault.jpg",
-    "id": "EgpHCLCwebU"
+    "id": "EgpHCLCwebU",
+    "edition": "2023"
   },
   {
     "title": "React Native Animations in 2023 and Beyond - Catalin Miron | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/WTfZJ9TreFc/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGH8gEygyMA8=&rs=AOn4CLDVs8tkeccOwdbg7fwOv8r4HBACpw",
-    "id": "WTfZJ9TreFc"
+    "id": "WTfZJ9TreFc",
+    "edition": "2023"
   },
   {
     "title": "Igniting React Native Upgrades with Flame AI - Jamon Holmgren | React Native EU 2023",
     "thumbnail": "https://i.ytimg.com/vi/8r0qirR3wWY/maxresdefault.jpg",
-    "id": "8r0qirR3wWY"
+    "id": "8r0qirR3wWY",
+    "edition": "2023"
   },
   {
     "title": "React Native EU 2023 Q&A Panel",
     "thumbnail": "https://i.ytimg.com/vi/KePfrsBj8wg/maxresdefault.jpg",
-    "id": "KePfrsBj8wg"
+    "id": "KePfrsBj8wg",
+    "edition": "2023"
   }
 ]
