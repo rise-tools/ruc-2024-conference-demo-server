@@ -2,6 +2,7 @@ import { Video } from '@prisma/client'
 import { navigate, StackScreen } from '@rise-tools/kit-expo-router/server'
 import { openURL } from '@rise-tools/kit-linking/server'
 import {
+  ActivityIndicator,
   FlatList,
   Image,
   ScrollView,
@@ -81,7 +82,12 @@ const Archive = view((get) => {
 
   const content = get(videos)
   if (!content) {
-    return <>{screen}</>
+    return (
+      <>
+        {screen}
+        <ActivityIndicator />
+      </>
+    )
   }
 
   return (
