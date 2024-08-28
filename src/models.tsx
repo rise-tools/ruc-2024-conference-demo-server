@@ -31,10 +31,10 @@ const $xl = 30
 function TitaniumSponsor() {
   return (
     <View style={{ flexDirection: 'column', alignItems: 'center', gap: $lg }}>
-      <ThemedText fontSize={$lg}>Titanium</ThemedText>
+      <ThemedText fontSize={24}>Titanium</ThemedText>
       <Image
         source={{ uri: 'https://avatars.githubusercontent.com/u/167453825?s=200&v=4' }}
-        style={{ width: 300, height: 300 }}
+        style={{ width: 100, height: 100 }}
       />
     </View>
   )
@@ -46,7 +46,7 @@ function ArchiveInfo() {
       <ThemedText style={{ marginBottom: 20 }}>
         Have you missed past editions? Worry not. We got videos for you!
       </ThemedText>
-      <Button title="Browse!" onPress={() => navigate('archive')} />
+      <Button title="Browse" onPress={navigate('archive')} />
     </InfoSection>
   )
 }
@@ -73,6 +73,7 @@ function VideoSection({ title, content }: { title: string; content: Content }) {
 
 const Archive = view((get) => {
   const screen = <StackScreen options={{ title: 'Archive', headerBackTitle: 'Go back' }} />
+
   const content = get(videos)
   if (!content) {
     return (
@@ -82,6 +83,7 @@ const Archive = view((get) => {
       </>
     )
   }
+
   return (
     <>
       {screen}
