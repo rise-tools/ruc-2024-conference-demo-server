@@ -1,3 +1,6 @@
 {
-	"extends": "@rise-tools/preset-typescript"
+	"extends": "@rise-tools/preset-typescript",
+	"compilerOptions": {
+		"resolveJsonModule": true
+	}
 }
