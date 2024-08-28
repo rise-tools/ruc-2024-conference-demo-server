@@ -2,10 +2,10 @@
   "name": "react-universe-conf-server-demo",
   "private": true,
   "dependencies": {
-    "@rise-tools/cli": "0.13.0",
-    "@rise-tools/kit-expo-router": "0.13.0",
-    "@rise-tools/kit-react-native": "0.13.0",
-    "@rise-tools/server": "0.13.0"
+    "@rise-tools/cli": "0.14.0",
+    "@rise-tools/kit-expo-router": "0.14.0",
+    "@rise-tools/kit-react-native": "0.14.0",
+    "@rise-tools/server": "0.14.0"
   },
   "devDependencies": {
     "@rise-tools/preset-typescript": "0.13.0",

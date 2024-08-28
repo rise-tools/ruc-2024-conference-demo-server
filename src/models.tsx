@@ -1,4 +1,4 @@
-import { navigate } from "@rise-tools/kit-expo-router/server";
+import { navigate, StackScreen } from "@rise-tools/kit-expo-router/server";
 import {
   VenueInfo,
   LiveStreamInfo,
@@ -8,21 +8,51 @@ import {
   OrganizersInfo,
   PoweredByExpo,
   InfoSection,
-  Button,
   ThemedText,
+  Button,
 } from "../../ruc2024-mobile-app/rise/components/server";
-import { Text } from "@rise-tools/kit-react-native/server";
+import { Image, View } from "@rise-tools/kit-react-native/server";
+
+/** Titanium Sponsor **/
+function TitaniumSponsor() {
+  return (
+    <View style={{ flexDirection: "column", alignItems: "center", gap: 16 }}>
+      <ThemedText fontSize={24}>
+        Titanium
+      </ThemedText>
+      <Image source={{ uri: "https://avatars.githubusercontent.com/u/167453825?s=200&v=4" }} style={{ width: 300, height: 300 }} />
+    </View>
+  )
+}
+
+/** Netflix */
+function NetflixInfo() {
+  return (
+    <InfoSection title="Netflix">
+      <Button title="Browse past videos" onPress={() => navigate("netflix")} />
+    </InfoSection>
+  )
+}
+
+function Netflix() {
+  return (
+    <>
+      <StackScreen options={{ title: "Netflix", headerBackTitle: "Go back" }} />
+      <InfoSection title="Netflix">
+      </InfoSection>
+    </>
+  )
+}
 
 function Info() {
   return (
     <>
-      <InfoSection title="Rise Tools">
-        <Button onPress={navigate('about')} title="Learn more" />
-      </InfoSection>
+      <NetflixInfo />
+      <SponsorsInfo />
+      <TitaniumSponsor />
       <VenueInfo />
       <LiveStreamInfo />
       <DiscordInfo />
-      <SponsorsInfo />
       <OrganizersInfo />
       <BuildDetails />
       <PoweredByExpo />
@@ -32,5 +62,5 @@ function Info() {
 
 export const models = {
   info: Info,
-  about: () => <InfoSection title="About" />,
+  netflix: () => <Netflix />,
 }
