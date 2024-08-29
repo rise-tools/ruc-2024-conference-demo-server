@@ -1,5 +1,6 @@
 import { createWSServer } from '@rise-tools/server'
 
-import { models } from './models'
+import { models as admin } from './admin'
+import { models as client } from './client'
 
-createWSServer(models, Number(process.env.PORT || '3005'))
+createWSServer({ ...client, ...admin }, Number(process.env.PORT || '3005'))

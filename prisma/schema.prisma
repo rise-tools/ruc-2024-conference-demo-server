@@ -12,5 +12,5 @@ model Video {
   title     String
   thumbnail String
   edition   String
-  order     Int    @default(autoincrement())
+  order     Int
 }

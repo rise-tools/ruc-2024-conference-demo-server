@@ -1,3 +1,13 @@
+/**
+ * React Universe has available the following modules:
+ * - kit-expo-router
+ * - kit-linking
+ * - kit-react-native
+ * - kit-expo-video
+ *
+ * Importing anything else (from kitchen-sink or kit-react-navigation) will trigger an error.
+ */
+
 import { Video } from '@prisma/client'
 import { navigate, StackScreen } from '@rise-tools/kit-expo-router/server'
 import { openURL } from '@rise-tools/kit-linking/server'
@@ -23,7 +33,7 @@ import {
   ThemedText,
   VenueInfo,
 } from '../../ruc2024-mobile-app/rise/components/server'
-import { edition, videos } from './db'
+import { edition } from './db'
 
 /** Poor man's tamagui */
 const $lg = 20
@@ -52,8 +62,8 @@ function ArchiveInfo() {
   )
 }
 
-function VideoSection({ title, content }: { title: string; content: Video[] }) {
-  const data = content.map((item) => ({
+function VideoSection({ title, content }: { title: string; content?: Video[] }) {
+  const data = content?.map((item) => ({
     key: item.id,
     view: (
       <TouchableOpacity onPress={openURL(`https://youtube.com/watch?v=${item.id}`)}>
@@ -64,6 +74,10 @@ function VideoSection({ title, content }: { title: string; content: Video[] }) {
       </TouchableOpacity>
     ),
   }))
+
+  if (!data) {
+    return <ActivityIndicator />
+  }
 
   if (data.length === 0) {
     return null
@@ -78,29 +92,17 @@ function VideoSection({ title, content }: { title: string; content: Video[] }) {
 }
 
 const Archive = view((get) => {
-  const screen = <StackScreen options={{ title: 'Archive', headerBackTitle: 'Go back' }} />
-
-  const content = get(videos)
-  if (!content) {
-    return (
-      <>
-        {screen}
-        <ActivityIndicator />
-      </>
-    )
-  }
-
   return (
     <>
-      {screen}
+      <StackScreen options={{ title: 'Archive', headerBackTitle: 'Go back' }} />
       <ScrollView contentContainerStyle={{ gap: 0, paddingBottom: $xl }}>
-        <VideoSection title="2023" content={edition(content, '2023')} />
-        <VideoSection title="2022" content={edition(content, '2022')} />
-        <VideoSection title="2021" content={edition(content, '2021')} />
-        <VideoSection title="2020" content={edition(content, '2020')} />
-        <VideoSection title="2019" content={edition(content, '2019')} />
-        <VideoSection title="2018" content={edition(content, '2018')} />
-        <VideoSection title="2017" content={edition(content, '2017')} />
+        <VideoSection title="2023" content={get(edition.get('2023')!)} />
+        <VideoSection title="2022" content={get(edition.get('2022')!)} />
+        <VideoSection title="2021" content={get(edition.get('2021')!)} />
+        <VideoSection title="2020" content={get(edition.get('2020')!)} />
+        <VideoSection title="2019" content={get(edition.get('2019')!)} />
+        <VideoSection title="2018" content={get(edition.get('2018')!)} />
+        <VideoSection title="2017" content={get(edition.get('2017')!)} />
       </ScrollView>
     </>
   )
@@ -109,8 +111,10 @@ const Archive = view((get) => {
 function Info() {
   return (
     <>
+      {/* This should be removed at the start of the demo */}
       <ArchiveInfo />
       <SponsorsInfo />
+      {/* This should be removed at the start of the demo */}
       <TitaniumSponsor />
       <VenueInfo />
       <LiveStreamInfo />
