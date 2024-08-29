@@ -5,7 +5,7 @@
  * import from `kitchen-sink` and `kit-react-navigation` only.
  */
 
-import { PrismaClient, Video } from '@prisma/client'
+import { PrismaClient } from '@prisma/client'
 import { ActivityIndicator, FlatList } from '@rise-tools/kit-react-native/server'
 import { goBack, navigate, StackScreen } from '@rise-tools/kit-react-navigation/server'
 import {
@@ -36,15 +36,6 @@ export const edition = lookup((edition: string) =>
  * Model to get a single video
  */
 export const video = lookup((id: string) => query(() => prisma.video.findUnique({ where: { id } })))
-
-/**
- * Action that updates the video and invalidates required models
- */
-export const updateVideo = async (og: Video, data: Partial<Video>) => {
-  await prisma.video.update({ where: { id: og.id }, data })
-  video.get(og.id)?.invalidate()
-  edition.get(og.edition)?.invalidate()
-}
 
 function Admin() {
   return (
