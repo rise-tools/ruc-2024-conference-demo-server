@@ -6,13 +6,8 @@ const prisma = new PrismaClient()
 
 async function run() {
   await prisma.video.deleteMany()
-
-  const items = require('./data/2023.json') as any[]
   await prisma.video.createMany({
-    data: items.map((item, idx) => ({
-      ...item,
-      order: idx,
-    })),
+    data: require('./data/2023.json')
   })
 }
 

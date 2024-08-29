@@ -10,12 +10,15 @@ import { ActivityIndicator, FlatList } from '@rise-tools/kit-react-native/server
 import { goBack, navigate, StackScreen } from '@rise-tools/kit-react-navigation/server'
 import {
   Button,
+  Image,
   InputField,
   RiseForm,
   SubmitButton,
   Text,
   toast,
   View,
+  XStack,
+  YStack,
 } from '@rise-tools/kitchen-sink/server'
 import { response } from '@rise-tools/react'
 import { lookup, query, view } from '@rise-tools/server'
@@ -117,9 +120,34 @@ const EditVideo = lookup((id) =>
 
           return response([toast('Edited'), goBack()])
         }}
+        padding="$2"
       >
-        <InputField id="title" defaultValue={content.title} />
-        <SubmitButton>Save</SubmitButton>
+        <InputField id="title" label="Title" defaultValue={content.title} />
+
+        <YStack>
+          <Image source={{ uri: content.thumbnail }} style={{ width: 250, height: 150 }} />
+          <InputField id="thumbnail" label="Thumbnail" defaultValue={content.thumbnail} />
+        </YStack>
+
+        <XStack gap="$2" justifyContent="space-between">
+          <SubmitButton theme="green" flex={1}>
+            Save
+          </SubmitButton>
+          <Button
+            theme="red"
+            flex={1}
+            onPress={async () => {
+              await prisma.video.delete({ where: { id: content.id } })
+
+              video.get(content.id)?.invalidate()
+              edition.get(content.edition)?.invalidate()
+
+              return response([toast('Deleted'), goBack()])
+            }}
+          >
+            Delete
+          </Button>
+        </XStack>
       </RiseForm>
     )
   })
