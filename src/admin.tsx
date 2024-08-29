@@ -5,6 +5,7 @@
  * import from `kitchen-sink` and `kit-react-navigation` only.
  */
 
+import { PrismaClient, Video } from '@prisma/client'
 import { ActivityIndicator, FlatList } from '@rise-tools/kit-react-native/server'
 import { goBack, navigate, StackScreen } from '@rise-tools/kit-react-navigation/server'
 import {
@@ -17,9 +18,30 @@ import {
   View,
 } from '@rise-tools/kitchen-sink/server'
 import { response } from '@rise-tools/react'
-import { lookup, view } from '@rise-tools/server'
+import { lookup, query, view } from '@rise-tools/server'
 
-import { edition, updateVideo, video } from './db'
+export const prisma = new PrismaClient()
+
+/**
+ * Model to get all videos from a given edition
+ */
+export const edition = lookup((edition: string) =>
+  query(() => prisma.video.findMany({ where: { edition } }))
+)
+
+/**
+ * Model to get a single video
+ */
+export const video = lookup((id: string) => query(() => prisma.video.findUnique({ where: { id } })))
+
+/**
+ * Action that updates the video and invalidates required models
+ */
+export const updateVideo = async (og: Video, data: Partial<Video>) => {
+  await prisma.video.update({ where: { id: og.id }, data })
+  video.get(og.id)?.invalidate()
+  edition.get(og.edition)?.invalidate()
+}
 
 function Admin() {
   return (
@@ -87,8 +109,12 @@ const EditVideo = lookup((id) =>
     }
     return (
       <RiseForm
-        onSubmit={async (values) => {
-          await updateVideo(content, values)
+        onSubmit={async (data) => {
+          await prisma.video.update({ where: { id: content.id }, data })
+
+          video.get(content.id)?.invalidate()
+          edition.get(content.edition)?.invalidate()
+
           return response([toast('Edited'), goBack()])
         }}
       >

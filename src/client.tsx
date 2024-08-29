@@ -33,7 +33,7 @@ import {
   ThemedText,
   VenueInfo,
 } from '../../ruc2024-mobile-app/rise/components/server'
-import { edition } from './db'
+import { edition } from './admin'
 
 /** Poor man's tamagui */
 const $lg = 20
