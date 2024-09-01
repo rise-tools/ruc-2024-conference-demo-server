@@ -26,11 +26,8 @@ import {
   ThemedText,
   VenueInfo,
 } from '../../ruc2024-mobile-app/rise/components/server'
-import { edition } from './admin'
-
-/** Poor man's tamagui */
-const $lg = 20
-const $xl = 30
+import { edition } from './models'
+import { $lg, $xl } from './style'
 
 function BronzeSponsor() {
   return (

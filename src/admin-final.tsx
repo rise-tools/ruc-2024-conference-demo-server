@@ -1,4 +1,3 @@
-import { PrismaClient } from '@prisma/client'
 import {
   ActivityIndicator,
   FlatList,
@@ -27,25 +26,7 @@ import {
   view,
 } from '@rise-tools/server'
 
-export const prisma = new PrismaClient()
-
-/**
- * Model to get all videos from a given edition
- */
-export const edition = lookup((edition: string) =>
-  query(() =>
-    prisma.video.findMany({ where: { edition } })
-  )
-)
-
-/**
- * Model to get a single video
- */
-export const video = lookup((id: string) =>
-  query(() =>
-    prisma.video.findUnique({ where: { id } })
-  )
-)
+import { edition, prisma, video } from './models'
 
 function Admin() {
   return (
