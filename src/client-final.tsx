@@ -29,7 +29,7 @@ import {
 import { edition } from './models'
 import { $lg, $xl } from './style'
 
-function BronzeSponsor() {
+function BrickSponsor() {
   return (
     <View
       style={{
@@ -38,9 +38,7 @@ function BronzeSponsor() {
         gap: $lg,
       }}
     >
-      <ThemedText fontSize={24}>
-        Bronze
-      </ThemedText>
+      <ThemedText fontSize={24}>Brick</ThemedText>
       <Image
         source={{
           uri: 'https://avatars.githubusercontent.com/u/167453825?s=200&v=4',
@@ -172,7 +170,7 @@ function Info() {
       <ArchiveInfo />
       <SponsorsInfo />
       {/* This should be removed at the start of the demo */}
-      <BronzeSponsor />
+      <BrickSponsor />
       <VenueInfo />
       <LiveStreamInfo />
       <DiscordInfo />
