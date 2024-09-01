@@ -1,6 +1,13 @@
 import { PrismaClient } from '@prisma/client'
-import { ActivityIndicator, FlatList } from '@rise-tools/kit-react-native/server'
-import { goBack, navigate, StackScreen } from '@rise-tools/kit-react-navigation/server'
+import {
+  ActivityIndicator,
+  FlatList,
+} from '@rise-tools/kit-react-native/server'
+import {
+  goBack,
+  navigate,
+  StackScreen,
+} from '@rise-tools/kit-react-navigation/server'
 import {
   Button,
   Image,
@@ -14,7 +21,11 @@ import {
   YStack,
 } from '@rise-tools/kitchen-sink/server'
 import { response } from '@rise-tools/react'
-import { lookup, query, view } from '@rise-tools/server'
+import {
+  lookup,
+  query,
+  view,
+} from '@rise-tools/server'
 
 export const prisma = new PrismaClient()
 
@@ -22,13 +33,19 @@ export const prisma = new PrismaClient()
  * Model to get all videos from a given edition
  */
 export const edition = lookup((edition: string) =>
-  query(() => prisma.video.findMany({ where: { edition } }))
+  query(() =>
+    prisma.video.findMany({ where: { edition } })
+  )
 )
 
 /**
  * Model to get a single video
  */
-export const video = lookup((id: string) => query(() => prisma.video.findUnique({ where: { id } })))
+export const video = lookup((id: string) =>
+  query(() =>
+    prisma.video.findUnique({ where: { id } })
+  )
+)
 
 function Admin() {
   return (
@@ -65,10 +82,13 @@ const Edit = lookup((year) =>
             view: (
               <Button
                 padding="$2"
-                onPress={navigate(`editVideo/${item.id}`, {
-                  title: item.title,
-                  headerBackTitle: 'Back',
-                })}
+                onPress={navigate(
+                  `editVideo/${item.id}`,
+                  {
+                    title: item.title,
+                    headerBackTitle: 'Back',
+                  }
+                )}
               >
                 <Text>{item.title}</Text>
               </Button>
@@ -97,23 +117,45 @@ const EditVideo = lookup((id) =>
     return (
       <RiseForm
         onSubmit={async (data) => {
-          await prisma.video.update({ where: { id: content.id }, data })
+          await prisma.video.update({
+            where: { id: content.id },
+            data,
+          })
 
           video.get(content.id)?.invalidate()
-          edition.get(content.edition)?.invalidate()
+          edition
+            .get(content.edition)
+            ?.invalidate()
 
-          return response([toast('Edited'), goBack()])
+          return response([
+            toast('Edited'),
+            goBack(),
+          ])
         }}
         padding="$2"
       >
-        <InputField id="title" label="Title" defaultValue={content.title} />
+        <InputField
+          id="title"
+          label="Title"
+          defaultValue={content.title}
+        />
 
         <YStack>
-          <Image source={{ uri: content.thumbnail }} style={{ width: 250, height: 150 }} />
-          <InputField id="thumbnail" label="Thumbnail" defaultValue={content.thumbnail} />
+          <Image
+            source={{ uri: content.thumbnail }}
+            style={{ width: 250, height: 150 }}
+          />
+          <InputField
+            id="thumbnail"
+            label="Thumbnail"
+            defaultValue={content.thumbnail}
+          />
         </YStack>
 
-        <XStack gap="$2" justifyContent="space-between">
+        <XStack
+          gap="$2"
+          justifyContent="space-between"
+        >
           <SubmitButton theme="green" flex={1}>
             Save
           </SubmitButton>
@@ -121,12 +163,19 @@ const EditVideo = lookup((id) =>
             theme="red"
             flex={1}
             onPress={async () => {
-              await prisma.video.delete({ where: { id: content.id } })
+              await prisma.video.delete({
+                where: { id: content.id },
+              })
 
               video.get(content.id)?.invalidate()
-              edition.get(content.edition)?.invalidate()
+              edition
+                .get(content.edition)
+                ?.invalidate()
 
-              return response([toast('Deleted'), goBack()])
+              return response([
+                toast('Deleted'),
+                goBack(),
+              ])
             }}
           >
             Delete

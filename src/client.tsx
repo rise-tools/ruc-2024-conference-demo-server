@@ -1,5 +1,8 @@
 import { Video } from '@prisma/client'
-import { navigate, StackScreen } from '@rise-tools/kit-expo-router/server'
+import {
+  navigate,
+  StackScreen,
+} from '@rise-tools/kit-expo-router/server'
 import { openURL } from '@rise-tools/kit-linking/server'
 import {
   ActivityIndicator,
