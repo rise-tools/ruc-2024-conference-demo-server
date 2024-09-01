@@ -1,10 +1,3 @@
-/**
- * This part runs inside Rise Playground.
- *
- * You can use anything that is available there. As a good practice,
- * import from `kitchen-sink` and `kit-react-navigation` only.
- */
-
 import { PrismaClient } from '@prisma/client'
 import { ActivityIndicator, FlatList } from '@rise-tools/kit-react-native/server'
 import { goBack, navigate, StackScreen } from '@rise-tools/kit-react-navigation/server'
