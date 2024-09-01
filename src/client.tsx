@@ -39,10 +39,10 @@ import { edition } from './admin'
 const $lg = 20
 const $xl = 30
 
-function TitaniumSponsor() {
+function BronzeSponsor() {
   return (
     <View style={{ flexDirection: 'column', alignItems: 'center', gap: $lg }}>
-      <ThemedText fontSize={24}>Titanium</ThemedText>
+      <ThemedText fontSize={24}>Bronze</ThemedText>
       <Image
         source={{ uri: 'https://avatars.githubusercontent.com/u/167453825?s=200&v=4' }}
         style={{ width: 100, height: 100 }}
@@ -115,7 +115,7 @@ function Info() {
       <ArchiveInfo />
       <SponsorsInfo />
       {/* This should be removed at the start of the demo */}
-      <TitaniumSponsor />
+      <BronzeSponsor />
       <VenueInfo />
       <LiveStreamInfo />
       <DiscordInfo />
