@@ -1,3 +1,14 @@
+/**
+ * React Universe has available the following modules:
+ * - kit-expo-router
+ * - kit-linking
+ * - kit-react-native
+ * - kit-expo-video
+ *
+ * Importing anything else (from kitchen-sink or kit-react-navigation) will trigger an error.
+ */
+
+import { Video } from '@prisma/client'
 import { navigate, StackScreen } from '@rise-tools/kit-expo-router/server'
 import { openURL } from '@rise-tools/kit-linking/server'
 import {
@@ -22,16 +33,16 @@ import {
   ThemedText,
   VenueInfo,
 } from '../../ruc2024-mobile-app/rise/components/server'
-import { Content, videos } from './db'
+import { edition } from './admin'
 
 /** Poor man's tamagui */
 const $lg = 20
 const $xl = 30
 
-function TitaniumSponsor() {
+function BronzeSponsor() {
   return (
     <View style={{ flexDirection: 'column', alignItems: 'center', gap: $lg }}>
-      <ThemedText fontSize={24}>Titanium</ThemedText>
+      <ThemedText fontSize={24}>Bronze</ThemedText>
       <Image
         source={{ uri: 'https://avatars.githubusercontent.com/u/167453825?s=200&v=4' }}
         style={{ width: 100, height: 100 }}
@@ -51,8 +62,8 @@ function ArchiveInfo() {
   )
 }
 
-function VideoSection({ title, content }: { title: string; content: Content }) {
-  const data = content.map((item) => ({
+function VideoSection({ title, content }: { title: string; content?: Video[] }) {
+  const data = content?.map((item) => ({
     key: item.id,
     view: (
       <TouchableOpacity onPress={openURL(`https://youtube.com/watch?v=${item.id}`)}>
@@ -63,6 +74,15 @@ function VideoSection({ title, content }: { title: string; content: Content }) {
       </TouchableOpacity>
     ),
   }))
+
+  if (!data) {
+    return <ActivityIndicator />
+  }
+
+  if (data.length === 0) {
+    return null
+  }
+
   return (
     <>
       <ThemedText style={{ fontSize: $xl, padding: $lg }}>{title}</ThemedText>
@@ -72,29 +92,17 @@ function VideoSection({ title, content }: { title: string; content: Content }) {
 }
 
 const Archive = view((get) => {
-  const screen = <StackScreen options={{ title: 'Archive', headerBackTitle: 'Go back' }} />
-
-  const content = get(videos)
-  if (!content) {
-    return (
-      <>
-        {screen}
-        <ActivityIndicator />
-      </>
-    )
-  }
-
   return (
     <>
-      {screen}
+      <StackScreen options={{ title: 'Archive', headerBackTitle: 'Go back' }} />
       <ScrollView contentContainerStyle={{ gap: 0, paddingBottom: $xl }}>
-        <VideoSection title="2023" content={content} />
-        <VideoSection title="2022" content={content} />
-        <VideoSection title="2021" content={content} />
-        <VideoSection title="2020" content={content} />
-        <VideoSection title="2019" content={content} />
-        <VideoSection title="2018" content={content} />
-        <VideoSection title="2017" content={content} />
+        <VideoSection title="2023" content={get(edition.get('2023')!)} />
+        <VideoSection title="2022" content={get(edition.get('2022')!)} />
+        <VideoSection title="2021" content={get(edition.get('2021')!)} />
+        <VideoSection title="2020" content={get(edition.get('2020')!)} />
+        <VideoSection title="2019" content={get(edition.get('2019')!)} />
+        <VideoSection title="2018" content={get(edition.get('2018')!)} />
+        <VideoSection title="2017" content={get(edition.get('2017')!)} />
       </ScrollView>
     </>
   )
@@ -103,9 +111,11 @@ const Archive = view((get) => {
 function Info() {
   return (
     <>
+      {/* This should be removed at the start of the demo */}
       <ArchiveInfo />
       <SponsorsInfo />
-      <TitaniumSponsor />
+      {/* This should be removed at the start of the demo */}
+      <BronzeSponsor />
       <VenueInfo />
       <LiveStreamInfo />
       <DiscordInfo />
