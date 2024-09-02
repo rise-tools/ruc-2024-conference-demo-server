@@ -29,6 +29,7 @@
   },
   "scripts": {
     "tunnel": "tsx src/tunnel.ts",
+    "init-db": "rm -rf prisma/migrations && prisma migrate dev --name init && npm run seed",
     "seed": "tsx prisma/seed.ts",
     "start": "cross-env NODE_ENV=development tsx watch src/server.ts"
   },

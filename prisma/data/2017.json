@@ -1,0 +1,176 @@
+[
+  {
+    "title": "Eric Vicenti - Practical hacks for delightful interactions",
+    "thumbnail": "https://i.ytimg.com/vi_webp/knq3HI8AMbk/maxresdefault.webp",
+    "id": "knq3HI8AMbk",
+    "year": "2017"
+  },
+  {
+    "title": "Mike Grabowski - Welcome to React Native EU 2017",
+    "thumbnail": "https://i.ytimg.com/vi_webp/35oObzSqaj4/maxresdefault.webp",
+    "id": "35oObzSqaj4",
+    "year": "2017"
+  },
+  {
+    "title": "Gant Laborde - Rapid React Native",
+    "thumbnail": "https://i.ytimg.com/vi_webp/pk7SubRY06w/maxresdefault.webp",
+    "id": "pk7SubRY06w",
+    "year": "2017"
+  },
+  {
+    "title": "Emil Sjölander - React Native, The Native Bits",
+    "thumbnail": "https://i.ytimg.com/vi_webp/8va9prUqjnA/maxresdefault.webp",
+    "id": "8va9prUqjnA",
+    "year": "2017"
+  },
+  {
+    "title": "Jani Eväkallio - When \"Good Enough\" - Just Isn't Good Enough",
+    "thumbnail": "https://i.ytimg.com/vi_webp/RiQ96dXqQ-w/maxresdefault.webp",
+    "id": "RiQ96dXqQ-w",
+    "year": "2017"
+  },
+  {
+    "title": "Satyajit Sahoo - Building of Snack  The React Native Playground",
+    "thumbnail": "https://i.ytimg.com/vi_webp/j7jgoKDNX_I/maxresdefault.webp",
+    "id": "j7jgoKDNX_I",
+    "year": "2017"
+  },
+  {
+    "title": "Tal Kol - Going Over The Speed Limit  Synchronous Rendering in React Native",
+    "thumbnail": "https://i.ytimg.com/vi_webp/wUNC6pXSgqA/maxresdefault.webp",
+    "id": "wUNC6pXSgqA",
+    "year": "2017"
+  },
+  {
+    "title": "Florian Rival - Building native modules for React Native",
+    "thumbnail": "https://i.ytimg.com/vi_webp/IVrhuJdrS7c/maxresdefault.webp",
+    "id": "IVrhuJdrS7c",
+    "year": "2017"
+  },
+  {
+    "title": "[LIGHTNING TALK] Guillermo Orellana - React Native and Badoo story of a massive experiment",
+    "thumbnail": "https://i.ytimg.com/vi_webp/T8qU_odXGc0/maxresdefault.webp",
+    "id": "T8qU_odXGc0",
+    "year": "2017"
+  },
+  {
+    "title": "[LIGHTNING TALK] Johannes Stein - Scaffolding plugins for React Native",
+    "thumbnail": "https://i.ytimg.com/vi_webp/QTD8eXWe2tc/maxresdefault.webp",
+    "id": "QTD8eXWe2tc",
+    "year": "2017"
+  },
+  {
+    "title": "[LIGHTNING TALK] Pavlo Aksonov - What is RNRF (react-native-router-flux)?",
+    "thumbnail": "https://i.ytimg.com/vi_webp/8DIGeTBMNR8/maxresdefault.webp",
+    "id": "8DIGeTBMNR8",
+    "year": "2017"
+  },
+  {
+    "title": "[LIGHTNING TALK] Sanket Sahu - Introducing the React Native Builder",
+    "thumbnail": "https://i.ytimg.com/vi_webp/XvEIIKRcouk/maxresdefault.webp",
+    "id": "XvEIIKRcouk",
+    "year": "2017"
+  },
+  {
+    "title": "[LIGHTNING TALK] Yoel Gluschnaider - How Skyscanner Tests RN Bridges on iOS",
+    "thumbnail": "https://i.ytimg.com/vi_webp/f7Mt4b-XJY4/maxresdefault.webp",
+    "id": "f7Mt4b-XJY4",
+    "year": "2017"
+  },
+  {
+    "title": "Andre Staltz - Composable Native APIs",
+    "thumbnail": "https://i.ytimg.com/vi_webp/SXdtrhn8iII/maxresdefault.webp",
+    "id": "SXdtrhn8iII",
+    "year": "2017"
+  },
+  {
+    "title": "Michael Haberman - React developer? How are your production skills?",
+    "thumbnail": "https://i.ytimg.com/vi_webp/Q_VT3DgfqkQ/maxresdefault.webp",
+    "id": "Q_VT3DgfqkQ",
+    "year": "2017"
+  },
+  {
+    "title": "Ken Wheeler - Reasonable React Native",
+    "thumbnail": "https://i.ytimg.com/vi_webp/zKdGQMU-2kc/maxresdefault.webp",
+    "id": "zKdGQMU-2kc",
+    "year": "2017"
+  },
+  {
+    "title": "Nader Dabit - Cross Platform & Beyond",
+    "thumbnail": "https://i.ytimg.com/vi_webp/1F9JgCQjVnc/maxresdefault.webp",
+    "id": "1F9JgCQjVnc",
+    "year": "2017"
+  },
+  {
+    "title": "Eloy Durán - Integrating React Native into an existing native codebase",
+    "thumbnail": "https://i.ytimg.com/vi_webp/hPpmV2LDYg0/maxresdefault.webp",
+    "id": "hPpmV2LDYg0",
+    "year": "2017"
+  },
+  {
+    "title": "Martin Konicek - Building a Product with React Native",
+    "thumbnail": "https://i.ytimg.com/vi_webp/208uTxIK2P8/maxresdefault.webp",
+    "id": "208uTxIK2P8",
+    "year": "2017"
+  },
+  {
+    "title": "Alexey Kureev - Network layer in React Native",
+    "thumbnail": "https://i.ytimg.com/vi_webp/IMN8bDmlfog/maxresdefault.webp",
+    "id": "IMN8bDmlfog",
+    "year": "2017"
+  },
+  {
+    "title": "Vladimir Novick - Getting into Physical web with React of Things",
+    "thumbnail": "https://i.ytimg.com/vi_webp/m3J-vOouaB4/maxresdefault.webp",
+    "id": "m3J-vOouaB4",
+    "year": "2017"
+  },
+  {
+    "title": "Aaron Greenwald - Scaling Mobile Development with React Native",
+    "thumbnail": "https://i.ytimg.com/vi_webp/8JHtModWW80/maxresdefault.webp",
+    "id": "8JHtModWW80",
+    "year": "2017"
+  },
+  {
+    "title": "Adrien Thiery - Offline first applications in React Native done well",
+    "thumbnail": "https://i.ytimg.com/vi_webp/SjiGEIhRMh4/maxresdefault.webp",
+    "id": "SjiGEIhRMh4",
+    "year": "2017"
+  },
+  {
+    "title": "Naoufal Kadhom - React Native Payments  Bringing the Payment Request API to React Native",
+    "thumbnail": "https://i.ytimg.com/vi_webp/XrmUuir9OHc/maxresdefault.webp",
+    "id": "XrmUuir9OHc",
+    "year": "2017"
+  },
+  {
+    "title": "Philippe Trepanier - Automate your React Native world with fastlane",
+    "thumbnail": "https://i.ytimg.com/vi_webp/1K5OLv3moFg/maxresdefault.webp",
+    "id": "1K5OLv3moFg",
+    "year": "2017"
+  },
+  {
+    "title": "React Native EU 2017 - Q&A Session",
+    "thumbnail": "https://i.ytimg.com/vi_webp/YzK4W2LXrMs/maxresdefault.webp",
+    "id": "YzK4W2LXrMs",
+    "year": "2017"
+  },
+  {
+    "title": "React Native EU 2017 - Thank you!",
+    "thumbnail": "https://i.ytimg.com/vi_webp/WDy9jhEqbCc/maxresdefault.webp",
+    "id": "WDy9jhEqbCc",
+    "year": "2017"
+  },
+  {
+    "title": "React Native EU 2017 - Backstage Interviews",
+    "thumbnail": "https://i.ytimg.com/vi_webp/qKlk7o9FvYE/maxresdefault.webp",
+    "id": "qKlk7o9FvYE",
+    "year": "2017"
+  },
+  {
+    "title": "React Native EU 2017 - The Movie",
+    "thumbnail": "https://i.ytimg.com/vi_webp/W34oMtAjazg/maxresdefault.webp",
+    "id": "W34oMtAjazg",
+    "year": "2017"
+  }
+]
