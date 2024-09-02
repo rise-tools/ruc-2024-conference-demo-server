@@ -26,8 +26,11 @@ import {
   ThemedText,
   VenueInfo,
 } from '../../ruc2024-mobile-app/rise/components/server'
-import { videosByYear } from './models'
-import { $lg, $xl } from './style'
+import { $lg, $xl } from '../src/helpers'
+import {
+  allYears,
+  videosByYear,
+} from '../src/models'
 
 function BrickSponsor() {
   return (
@@ -83,7 +86,7 @@ function Edition({
           source={{ uri: item.thumbnail }}
           style={{
             width: 250,
-            height: 150,
+            aspectRatio: 16 / 9,
             marginLeft: $lg,
           }}
         />
@@ -116,6 +119,7 @@ function Edition({
 }
 
 const Archive = view((get) => {
+  const editions = get(allYears)
   return (
     <>
       <StackScreen
@@ -130,34 +134,13 @@ const Archive = view((get) => {
           paddingBottom: $xl,
         }}
       >
-        <Edition
-          title="2023"
-          content={get(videosByYear.get('2023')!)}
-        />
-        <Edition
-          title="2022"
-          content={get(videosByYear.get('2022')!)}
-        />
-        <Edition
-          title="2021"
-          content={get(videosByYear.get('2021')!)}
-        />
-        <Edition
-          title="2020"
-          content={get(videosByYear.get('2020')!)}
-        />
-        <Edition
-          title="2019"
-          content={get(videosByYear.get('2019')!)}
-        />
-        <Edition
-          title="2018"
-          content={get(videosByYear.get('2018')!)}
-        />
-        <Edition
-          title="2017"
-          content={get(videosByYear.get('2017')!)}
-        />
+        {editions?.map((year) => (
+          <Edition
+            key={year}
+            title={year}
+            content={get(videosByYear.get(year)!)}
+          />
+        ))}
       </ScrollView>
     </>
   )
@@ -166,10 +149,8 @@ const Archive = view((get) => {
 function Info() {
   return (
     <>
-      {/* This should be removed at the start of the demo */}
       <ArchiveInfo />
       <SponsorsInfo />
-      {/* This should be removed at the start of the demo */}
       <BrickSponsor />
       <VenueInfo />
       <LiveStreamInfo />

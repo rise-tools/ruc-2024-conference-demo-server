@@ -30,13 +30,13 @@ import {
   view,
 } from '@rise-tools/server'
 
+import { buttonStyle } from '../src/helpers'
 import {
   allYears,
   prisma,
   video,
   videosByYear,
-} from './models'
-import { buttonStyle } from './views'
+} from '../src/models'
 
 const Admin = view((get) => {
   const data = get(allYears)
