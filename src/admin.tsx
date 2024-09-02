@@ -1,5 +1,7 @@
-import { Text } from '@rise-tools/kit-react-native/server'
-import { YStack } from '@rise-tools/kitchen-sink/server'
+import {
+  Text,
+  YStack,
+} from '@rise-tools/kitchen-sink/server'
 
 export const models = {
   admin: UI,

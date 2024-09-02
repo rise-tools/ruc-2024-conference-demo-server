@@ -3,7 +3,7 @@ CREATE TABLE "Video" (
     "id" TEXT NOT NULL,
     "title" TEXT NOT NULL,
     "thumbnail" TEXT NOT NULL,
-    "edition" TEXT NOT NULL
+    "year" TEXT NOT NULL
 );
 
 -- CreateIndex

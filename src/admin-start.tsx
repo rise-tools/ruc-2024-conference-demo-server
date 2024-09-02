@@ -131,20 +131,7 @@ const EditVideo = lookup((id) =>
     return (
       <RiseForm
         onSubmit={async (data) => {
-          await prisma.video.update({
-            where: { id: content.id },
-            data,
-          })
-
-          video.get(content.id)?.invalidate()
-          videosByYear
-            .get(content.year)
-            ?.invalidate()
-
-          return response([
-            toast('Video edited! 🎉'),
-            goBack(),
-          ])
+          console.log(data)
         }}
         padding="$4"
         gap="$4"
@@ -179,27 +166,6 @@ const EditVideo = lookup((id) =>
           >
             Save
           </SubmitButton>
-          <Button
-            theme="red"
-            icon={<LucideIcon icon="Trash" />}
-            onPress={async () => {
-              await prisma.video.delete({
-                where: { id: content.id },
-              })
-
-              video.get(content.id)?.invalidate()
-              videosByYear
-                .get(content.year)
-                ?.invalidate()
-
-              return response([
-                toast('Video deleted! 🗑️'),
-                goBack(),
-              ])
-            }}
-          >
-            Delete
-          </Button>
         </YStack>
       </RiseForm>
     )

@@ -26,7 +26,7 @@ import {
   ThemedText,
   VenueInfo,
 } from '../../ruc2024-mobile-app/rise/components/server'
-import { edition } from './models'
+import { videosByYear } from './models'
 import { $lg, $xl } from './style'
 
 function BrickSponsor() {
@@ -64,7 +64,7 @@ function ArchiveInfo() {
   )
 }
 
-function VideoSection({
+function Edition({
   title,
   content,
 }: {
@@ -130,33 +130,33 @@ const Archive = view((get) => {
           paddingBottom: $xl,
         }}
       >
-        <VideoSection
+        <Edition
           title="2023"
-          content={get(edition.get('2023')!)}
+          content={get(videosByYear.get('2023')!)}
         />
-        <VideoSection
+        <Edition
           title="2022"
-          content={get(edition.get('2022')!)}
+          content={get(videosByYear.get('2022')!)}
         />
-        <VideoSection
+        <Edition
           title="2021"
-          content={get(edition.get('2021')!)}
+          content={get(videosByYear.get('2021')!)}
         />
-        <VideoSection
+        <Edition
           title="2020"
-          content={get(edition.get('2020')!)}
+          content={get(videosByYear.get('2020')!)}
         />
-        <VideoSection
+        <Edition
           title="2019"
-          content={get(edition.get('2019')!)}
+          content={get(videosByYear.get('2019')!)}
         />
-        <VideoSection
+        <Edition
           title="2018"
-          content={get(edition.get('2018')!)}
+          content={get(videosByYear.get('2018')!)}
         />
-        <VideoSection
+        <Edition
           title="2017"
-          content={get(edition.get('2017')!)}
+          content={get(videosByYear.get('2017')!)}
         />
       </ScrollView>
     </>

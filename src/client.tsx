@@ -26,7 +26,6 @@ import {
   ThemedText,
   VenueInfo,
 } from '../../ruc2024-mobile-app/rise/components/server'
-import { edition } from './models'
 
 function Info() {
   return (
