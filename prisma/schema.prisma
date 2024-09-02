@@ -11,5 +11,5 @@ model Video {
   id        String @unique
   title     String
   thumbnail String
-  edition   String
+  year      String
 }
