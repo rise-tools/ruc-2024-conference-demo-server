@@ -36,7 +36,6 @@ function BrickSponsor() {
   return (
     <View
       style={{
-        flexDirection: 'column',
         alignItems: 'center',
         gap: $lg,
       }}
@@ -55,7 +54,7 @@ function BrickSponsor() {
 function ArchiveInfo() {
   return (
     <InfoSection title="Talk Archive">
-      <ThemedText style={{ marginBottom: 20 }}>
+      <ThemedText style={{ marginBottom: $lg }}>
         Have you missed past editions? Worry not.
         We got videos for you!
       </ThemedText>
@@ -74,34 +73,6 @@ function Edition({
   title: string
   content?: Video[]
 }) {
-  const data = content?.map((item) => ({
-    key: item.id,
-    view: (
-      <TouchableOpacity
-        onPress={openURL(
-          `https://youtube.com/watch?v=${item.id}`
-        )}
-      >
-        <Image
-          source={{ uri: item.thumbnail }}
-          style={{
-            width: 250,
-            aspectRatio: 16 / 9,
-            marginLeft: $lg,
-          }}
-        />
-      </TouchableOpacity>
-    ),
-  }))
-
-  if (!data) {
-    return <ActivityIndicator />
-  }
-
-  if (data.length === 0) {
-    return null
-  }
-
   return (
     <>
       <ThemedText
@@ -112,7 +83,25 @@ function Edition({
       <FlatList
         horizontal
         showsHorizontalScrollIndicator={false}
-        data={data}
+        data={content?.map((item) => ({
+          key: item.id,
+          view: (
+            <TouchableOpacity
+              onPress={openURL(
+                `https://youtube.com/watch?v=${item.id}`
+              )}
+            >
+              <Image
+                source={{ uri: item.thumbnail }}
+                style={{
+                  width: 250,
+                  aspectRatio: 16 / 9,
+                  marginLeft: $lg,
+                }}
+              />
+            </TouchableOpacity>
+          ),
+        }))}
       />
     </>
   )
@@ -130,7 +119,6 @@ const Archive = view((get) => {
       />
       <ScrollView
         contentContainerStyle={{
-          gap: 0,
           paddingBottom: $xl,
         }}
       >

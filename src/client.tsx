@@ -25,3 +25,5 @@ function Info() {
 export const models = {
   info: Info,
 }
+
+// https://avatars.githubusercontent.com/u/167453825?s=200&v=4

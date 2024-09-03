@@ -48,21 +48,23 @@ const Admin = view((get) => {
       <StackScreen title="React Universe Console" />
       <View padding="$4" gap="$4">
         <H3>Past editions</H3>
-        {data.map((year, idx, arr) => (
-          <Button
-            key={year}
-            {...buttonStyle(idx, arr.length)}
-            onPress={navigate(
-              `editYear/${year}`,
-              {
-                title: year,
-                headerBackTitle: 'Back',
-              }
-            )}
-          >
-            <Text fontSize="$2">2023</Text>
-          </Button>
-        ))}
+        <YStack>
+          {data.map((year, idx, arr) => (
+            <Button
+              key={year}
+              {...buttonStyle(idx, arr.length)}
+              onPress={navigate(
+                `editYear/${year}`,
+                {
+                  title: year,
+                  headerBackTitle: 'Back',
+                }
+              )}
+            >
+              <Text fontSize="$2">{year}</Text>
+            </Button>
+          ))}
+        </YStack>
       </View>
     </>
   )
@@ -211,3 +213,5 @@ export const models = {
   editYear: EditYear,
   editVideo: EditVideo,
 }
+
+// https://raw.githubusercontent.com/rise-tools/ruc-2024-conference-demo-server/main/assets/clickbait.png
