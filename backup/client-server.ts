@@ -1,6 +1,6 @@
 import { createWSServer } from '@rise-tools/server'
 
-import { models } from './client'
+import { models } from '../src/client'
 
 createWSServer(
   models,
