@@ -124,5 +124,16 @@
 			"}"
 		],
 		"description": "React Native Edition component for displaying video thumbnails"
+	},
+	"step-5": {
+    "prefix": "editioncomponent",
+    "body": [
+      "<Edition",
+      "  key={year}",
+      "  title={year}",
+      "  content={get(videosByYear.get(year)!)}",
+      "/>"
+    ],
+    "description": "Edition component for displaying videos of a specific year"
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "step-5": {
+  "step-6": {
     "prefix": "adminmodule",
     "body": [
       "import {",
@@ -57,10 +57,13 @@
       "            <Button",
       "              key={year}",
       "              {...buttonStyle(idx, arr.length)}",
-      "              onPress={navigate(`editYear/year`, {",
-      "                title: year,",
-      "                headerBackTitle: 'Back',",
-      "              })}",
+      "              onPress={navigate(",
+      "                `editYear/\\${year}`,",
+      "                {",
+      "                  title: year,",
+      "                  headerBackTitle: 'Back',",
+      "                }",
+      "              )}",
       "            >",
       "              <Text fontSize=\"\\$2\">{year}</Text>",
       "            </Button>",
@@ -73,11 +76,13 @@
       "",
       "export const models = {",
       "  admin: Admin,",
-      "}"
+      "}",
+      "",
+      "// https://raw.githubusercontent.com/rise-tools/ruc-2024-conference-demo-server/main/assets/clickbait.png"
     ],
     "description": "React Native Admin module with imports, component, and export"
   },
-  "step-6": {
+  "step-7": {
     "prefix": [
       "edityearcomponent"
     ],
@@ -130,7 +135,7 @@
     ],
     "description": "React Native EditYear component for displaying and editing videos of a specific year (replaces entire file)"
   },
-  "step-7": {
+  "step-8": {
     "prefix": [
       "editvideocomponent",
       "^(?:\\s|.)*$"
@@ -196,7 +201,26 @@
     ],
     "description": "React Native EditVideo component for editing video details (replaces entire file)"
   },
-  "step-8": {
+  "step-9": {
+    "prefix": "updatevideo",
+    "body": [
+      "await prisma.video.update({",
+      "  where: { id: content.id },",
+      "  data,",
+      "})",
+      "",
+      "video.get(content.id)?.invalidate()",
+      "videosByYear",
+      "  .get(content.year)",
+      "  ?.invalidate()",
+      "",
+      "return response(",
+      "  toast('Video edited! 🎉')",
+      ")"
+    ],
+    "description": "Update video, invalidate caches, and show toast message"
+  },
+  "step-0": {
     "prefix": "delete-video-button",
     "body": [
       "<Button",
