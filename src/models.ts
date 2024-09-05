@@ -8,6 +8,7 @@ export const videosByYear = lookup(
     query(() =>
       prisma.video.findMany({
         where: { year },
+        orderBy: { createdAt: 'asc' },
       })
     )
 )
@@ -23,6 +24,7 @@ export const allYears = query(async () => {
     await prisma.video.findMany({
       distinct: ['year'],
       select: { year: true },
+      orderBy: { year: 'desc' },
     })
   ).map((item) => item.year)
 })

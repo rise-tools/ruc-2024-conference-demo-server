@@ -201,27 +201,6 @@ const EditVideo = lookup((id) =>
           >
             Delete
           </Button>
-          <Button
-            theme="red"
-            icon={<LucideIcon icon="Trash" />}
-            onPress={async () => {
-              await prisma.video.delete({
-                where: { id: content.id },
-              })
-
-              video.get(content.id)?.invalidate()
-              videosByYear
-                .get(content.year)
-                ?.invalidate()
-
-              return response([
-                toast('Video deleted! 🗑️'),
-                goBack(),
-              ])
-            }}
-          >
-            Delete
-          </Button>
         </YStack>
       </RiseForm>
     )

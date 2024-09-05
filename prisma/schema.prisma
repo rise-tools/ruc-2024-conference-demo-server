@@ -8,8 +8,9 @@ datasource db {
 }
 
 model Video {
-  id        String @unique
+  id        String   @unique
   title     String
   thumbnail String
   year      String
+  createdAt DateTime @default(now())
 }
